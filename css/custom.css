@@ -47,3 +47,32 @@ div#post:hover {
     font-size: 14px;
     letter-spacing: 2px; /* 字间距 */
 }
+
+/* === 全站主题色暴力覆盖 === */
+:root {
+    --btn-bg: #FF98C5 !important;           /* 按钮背景 */
+    --btn-hover-color: #FF729F !important;  /* 按钮悬停 */
+    --text-bg-hover: #FF98C5 !important;    /* 文字悬停背景 */
+    --theme-color: #FF98C5 !important;      /* 核心主题色 */
+    --sidebar-active-color: #FF98C5 !important; /* 侧边栏选中色 */
+    --tab-active-border-color: #FF98C5 !important; /* 选项卡边框 */
+    --hr-border: #FF98C5 !important;        /* 分割线 */
+    --hr-before-color: #FF98C5 !important;  /* 分割线装饰 */
+}
+
+/* 强制修改归档、分类、标签卡片的鼠标悬停颜色 */
+#aside-content .card-archive-list-item a:hover,
+#aside-content .card-category-list-item a:hover,
+#aside-content .card-tag-cloud a:hover {
+    background-color: #FF98C5 !important;
+}
+
+/* 强制修改文章标题的鼠标悬停颜色 */
+#recent-posts > .recent-post-item > .recent-post-info > .article-title:hover {
+    color: #FF98C5 !important;
+}
+
+/* 强制修改顶栏菜单的悬停背景 */
+#nav .menus_items .menus_item:hover .menus_item_child li:hover {
+    background-color: #FF98C5 !important;
+}
