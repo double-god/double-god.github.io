@@ -30,14 +30,14 @@
 
 /* 顶部大图区域背景 */
 #page-header {
-    background-color: #FF98C5 !important;
+    background-color: #f9aecf !important;
     background-image: none !important;
     /* 移除默认背景图 */
 }
 
 /* 顶部导航栏 (菜单栏) */
 #nav {
-    background-color: rgba(255, 152, 197, 0.8) !important;
+    background-color: rgb(242, 152, 198) !important;
     /* 半透明粉色 */
 }
 
