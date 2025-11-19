@@ -22,3 +22,28 @@ div#post:hover {
     box-shadow: 0 0 15px rgba(202, 203, 203, 0.8) !important;
     transform: translateY(-3px);
 }
+
+/* === 文章内链接颜色修改 (粉色系) === */
+#article-container a {
+    color: #fc7bbb; /* 这里的 #FF69B4 是热粉色，你可以换成任何你喜欢的颜色代码 */
+    text-decoration: none; /* 去掉默认下划线 */
+    border-bottom: 1px solid #FF69B4; /* 加一个粉色的底部边框，像下划线一样但更好看 */
+    transition: all 0.3s;
+}
+
+/* 鼠标放上去的时候（变深一点，且去掉下划线） */
+#article-container a:hover {
+    color: #e642aa; /* 紫红色 */
+    border-bottom: none; /* 悬停时去掉下划线，产生动态感 */
+    text-decoration: none !important;
+}
+
+.post-content::after {
+    content: "------------- 本文结束  感谢您的阅读 -------------";
+    display: block;
+    text-align: center;
+    color: #ee9fe2;  /* 粉色字体 */
+    margin: 40px 0;  /* 上下留点空隙 */
+    font-size: 14px;
+    letter-spacing: 2px; /* 字间距 */
+}
