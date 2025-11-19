@@ -1,102 +1,141 @@
+/* =========================================================
+   1. 全局主题色暴力覆盖 (Root Variables)
+   这部分修改了 Butterfly 主题的核心变量，把所有默认蓝色改成粉色
+   ========================================================= */
+:root {
+    --btn-bg: #FF98C5 !important;
+    /* 按钮背景 */
+    --btn-hover-color: #FF729F !important;
+    /* 按钮悬停颜色 */
+    --text-bg-hover: #FF98C5 !important;
+    /* 文字背景悬停 */
+    --theme-color: #FF98C5 !important;
+    /* 主题核心色 */
+    --sidebar-active-color: #FF98C5 !important;
+    /* 侧边栏激活色 */
+    --tab-active-border-color: #FF98C5 !important;
+    /* 标签页边框 */
+    --hr-border: #FF98C5 !important;
+    /* 分割线 */
+    --hr-before-color: #FF98C5 !important;
+    /* 分割线装饰 */
+    --search-bg: #FF98C5 !important;
+    /* 搜索框背景 */
+}
+
+/* =========================================================
+   2. 强制覆盖顶部 (Header) 和底部 (Footer)
+   不管有没有背景图，都强制变成粉色
+   ========================================================= */
+
+/* 顶部大图区域背景 */
+#page-header {
+    background-color: #FF98C5 !important;
+    background-image: none !important;
+    /* 移除默认背景图 */
+}
+
+/* 顶部导航栏 (菜单栏) */
+#nav {
+    background-color: rgba(255, 152, 197, 0.8) !important;
+    /* 半透明粉色 */
+}
+
+/* 底部页脚区域 */
+#footer {
+    background-color: #FF98C5 !important;
+    background-image: none !important;
+}
+
+/* 手机端侧边栏 */
+#sidebar {
+    background-color: #FF98C5 !important;
+}
+
+#sidebar #sidebar-menus {
+    background-color: #fff !important;
+    /* 菜单保持白色 */
+}
+
+/* 文章详情页的顶部背景 */
+#page-header.post-bg {
+    background-color: #FF98C5 !important;
+    background-image: none !important;
+}
+
+/* =========================================================
+   3. 卡片样式与半透明磨砂效果
+   ========================================================= */
+
 /* 首页文章卡片、文章详情页、侧边栏卡片 */
-#recent-posts > .recent-post-item,
+#recent-posts>.recent-post-item,
 #aside-content .card-widget,
 div#post {
-    /* 背景颜色：白色，透明度 0.9 (实现截图里的半透明效果) */
+    /* 背景颜色：白色，透明度 0.9 */
     background: rgba(255, 255, 255, 0.9) !important;
-    
-    /* 阴影效果：照抄你截图里的参数 (水平偏移 垂直偏移 模糊度 颜色) */
+
+    /* 阴影效果：浅灰色阴影 */
     box-shadow: 0 0 5px rgba(89, 94, 94, 0.5) !important;
-    
-    /* 既然加了阴影，顺便加个圆角会更好看 */
+
+    /* 圆角 */
     border-radius: 12px !important;
-    
-    /* 鼠标悬停时的特效（可选）：鼠标放上去阴影变深 */
+
+    /* 过渡动画 */
     transition: all 0.3s;
 }
 
-/* 鼠标悬停时让卡片浮起来一点点 */
-#recent-posts > .recent-post-item:hover,
+/* 鼠标悬停浮起特效 */
+#recent-posts>.recent-post-item:hover,
 #aside-content .card-widget:hover,
 div#post:hover {
     box-shadow: 0 0 15px rgba(202, 203, 203, 0.8) !important;
     transform: translateY(-3px);
 }
 
-/* === 文章内链接颜色修改 (粉色系) === */
+/* =========================================================
+   4. 细节修饰 (链接、文字、按钮)
+   ========================================================= */
+
+/* 文章内链接颜色 (粉色) */
 #article-container a {
-    color: #fc7bbb; /* 这里的 #FF69B4 是热粉色，你可以换成任何你喜欢的颜色代码 */
-    text-decoration: none; /* 去掉默认下划线 */
-    border-bottom: 1px solid #FF69B4; /* 加一个粉色的底部边框，像下划线一样但更好看 */
+    color: #fc7bbb;
+    text-decoration: none;
+    border-bottom: 1px solid #FF98C5;
     transition: all 0.3s;
 }
 
-/* 鼠标放上去的时候（变深一点，且去掉下划线） */
+/* 链接悬停效果 */
 #article-container a:hover {
-    color: #e642aa; /* 紫红色 */
-    border-bottom: none; /* 悬停时去掉下划线，产生动态感 */
-    text-decoration: none !important;
+    color: #e642aa;
+    border-bottom: none;
 }
 
-.post-content::after {
-    content: "------------- 本文结束  感谢您的阅读 -------------";
-    display: block;
-    text-align: center;
-    color: #ee9fe2;  /* 粉色字体 */
-    margin: 40px 0;  /* 上下留点空隙 */
-    font-size: 14px;
-    letter-spacing: 2px; /* 字间距 */
-}
-
-/* === 全站主题色暴力覆盖 === */
-:root {
-    --btn-bg: #FF98C5 !important;           /* 按钮背景 */
-    --btn-hover-color: #FF729F !important;  /* 按钮悬停 */
-    --text-bg-hover: #FF98C5 !important;    /* 文字悬停背景 */
-    --theme-color: #FF98C5 !important;      /* 核心主题色 */
-    --sidebar-active-color: #FF98C5 !important; /* 侧边栏选中色 */
-    --tab-active-border-color: #FF98C5 !important; /* 选项卡边框 */
-    --hr-border: #FF98C5 !important;        /* 分割线 */
-    --hr-before-color: #FF98C5 !important;  /* 分割线装饰 */
-}
-
-/* 强制修改归档、分类、标签卡片的鼠标悬停颜色 */
+/* 强制修改侧边栏 (归档/分类/标签) 的悬停颜色 */
 #aside-content .card-archive-list-item a:hover,
 #aside-content .card-category-list-item a:hover,
 #aside-content .card-tag-cloud a:hover {
     background-color: #FF98C5 !important;
 }
 
-/* 强制修改文章标题的鼠标悬停颜色 */
-#recent-posts > .recent-post-item > .recent-post-info > .article-title:hover {
+/* 强制修改首页文章标题的悬停颜色 */
+#recent-posts>.recent-post-item>.recent-post-info>.article-title:hover {
     color: #FF98C5 !important;
 }
 
-/* 强制修改顶栏菜单的悬停背景 */
+/* 强制修改菜单栏子菜单的悬停颜色 */
 #nav .menus_items .menus_item:hover .menus_item_child li:hover {
     background-color: #FF98C5 !important;
 }
 
-#page-header {
-    background-color: #f273aa !important;
-    background-image: none !important; /* 确保没有默认图片干扰 */
-}
-
-/* 2. 底部页脚背景 (脚) */
-#footer {
-    background-color: #f273aa !important;
-    background-image: none !important;
-}
-
-/* 3. 手机端侧边栏的背景（如果有的话） */
-#sidebar {
-    background-color: #FF98C5 !important;
-}
-#sidebar #sidebar-menus {
-    background-color: #fff !important; /* 菜单保持白色更清晰，或者你也改成粉色 */
-}
-
-/* 4. 文章页顶部背景（防止文章页还是蓝的） */
-#page-header.post-bg {
-    background-color: #FF98C5 !important;
+/* =========================================================
+   5. 文章末尾提示
+   ========================================================= */
+.post-content::after {
+    content: "------------- 本文结束  感谢您的阅读 -------------";
+    display: block;
+    text-align: center;
+    color: #ee9fe2;
+    margin: 40px 0;
+    font-size: 14px;
+    letter-spacing: 2px;
 }
