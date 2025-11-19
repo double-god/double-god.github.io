@@ -1,0 +1,24 @@
+/* 首页文章卡片、文章详情页、侧边栏卡片 */
+#recent-posts > .recent-post-item,
+#aside-content .card-widget,
+div#post {
+    /* 背景颜色：白色，透明度 0.9 (实现截图里的半透明效果) */
+    background: rgba(255, 255, 255, 0.9) !important;
+    
+    /* 阴影效果：照抄你截图里的参数 (水平偏移 垂直偏移 模糊度 颜色) */
+    box-shadow: 0 0 5px rgba(89, 94, 94, 0.5) !important;
+    
+    /* 既然加了阴影，顺便加个圆角会更好看 */
+    border-radius: 12px !important;
+    
+    /* 鼠标悬停时的特效（可选）：鼠标放上去阴影变深 */
+    transition: all 0.3s;
+}
+
+/* 鼠标悬停时让卡片浮起来一点点 */
+#recent-posts > .recent-post-item:hover,
+#aside-content .card-widget:hover,
+div#post:hover {
+    box-shadow: 0 0 15px rgba(202, 203, 203, 0.8) !important;
+    transform: translateY(-3px);
+}
