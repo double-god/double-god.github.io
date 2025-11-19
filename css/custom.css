@@ -76,3 +76,27 @@ div#post:hover {
 #nav .menus_items .menus_item:hover .menus_item_child li:hover {
     background-color: #FF98C5 !important;
 }
+
+#page-header {
+    background-color: #f273aa !important;
+    background-image: none !important; /* 确保没有默认图片干扰 */
+}
+
+/* 2. 底部页脚背景 (脚) */
+#footer {
+    background-color: #f273aa !important;
+    background-image: none !important;
+}
+
+/* 3. 手机端侧边栏的背景（如果有的话） */
+#sidebar {
+    background-color: #FF98C5 !important;
+}
+#sidebar #sidebar-menus {
+    background-color: #fff !important; /* 菜单保持白色更清晰，或者你也改成粉色 */
+}
+
+/* 4. 文章页顶部背景（防止文章页还是蓝的） */
+#page-header.post-bg {
+    background-color: #FF98C5 !important;
+}
