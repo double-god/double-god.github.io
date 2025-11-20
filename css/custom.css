@@ -139,3 +139,53 @@ div#post:hover {
     font-size: 14px;
     letter-spacing: 2px;
 }
+
+/* =========================================================
+   6. 粉色按钮样式
+   ========================================================= */
+
+/* 7. 代码块样式优化 (粉色限定版)
+   ================================================================= */
+
+/* 1. 行内代码样式 (就是文字中间夹杂的 `git clone` 这种) */
+#article-container code {
+    background-color: #fff0f5 !important; /* 背景：淡粉色 (LavenderBlush) */
+    color: #FF69B4 !important;            /* 文字：热粉色 */
+    padding: 2px 6px;
+    margin: 0 4px;
+    border-radius: 4px;
+    border: 1px solid #ffe4e1;            /* 边框：浅玫瑰色 */
+}
+
+/* 2. 大代码块容器 (figure.highlight) */
+#article-container figure.highlight {
+    background-color: #fff0f5 !important; /* 代码块背景：淡粉色 */
+    border-radius: 10px;
+    border: 1px dashed #FFB6C1;           /* 边框：虚线浅粉色 */
+}
+
+/* 3. 代码块顶部工具栏 (显示语言和复制按钮的那一行) */
+#article-container figure.highlight .highlight-tools {
+    background-color: #ffe4e1 !important; /* 工具栏背景：稍深一点的粉 */
+    color: #d43c6e !important;            /* 工具栏文字：深粉红 */
+}
+
+/* 4. 代码块左侧行号区域 (Gutter) */
+#article-container figure.highlight .gutter pre {
+    background-color: #fff5f7 !important; /* 行号背景：极淡粉 */
+    color: #ffaabf !important;            /* 行号文字：粉色 */
+}
+
+/* 5. 代码块内的滚动条美化 */
+#article-container figure.highlight table::-webkit-scrollbar-thumb {
+    background-color: #FFB6C1 !important; /* 滚动条滑块 */
+}
+#article-container figure.highlight table::-webkit-scrollbar-track {
+    background-color: #fff0f5 !important; /* 滚动条轨道 */
+}
+
+/* 6. 选中代码时的颜色 (粉色高亮) */
+#article-container figure.highlight ::selection {
+    background-color: #FF69B4 !important;
+    color: white !important;
+}
